@@ -19,7 +19,7 @@ import { ref, onMounted, reactive } from 'vue'
 // import HelloWorld from './components/HelloWorld.vue'
 import KLineHeader from '@/components/KLineHeader'
 import { getSymbols } from '@/api'
-
+import { ws } from '@/utils/socket'
 export default {
   name: 'App',
   components: {
@@ -30,7 +30,7 @@ export default {
     const symbol = ref('')
     const symbolInfo = ref({})
     onMounted(async () => {
-
+      ws.initWebSocket()
       const [list, symbolData] = await getSymbols()
       symbolList.value = list
       symbol.value = symbolData
