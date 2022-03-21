@@ -1,6 +1,10 @@
 # vue-tradingview-ws
 
-[tradingview-web-socket](https://github.com/472647301/tradingview-web-socket) vue3-javascript-demo
+[tradingview-web-socket](https://github.com/472647301/tradingview-web-socket) vue3-javascript-demo  
+
+tradingview-web-socket/[charting_library](https://github.com/472647301/tradingview-web-socket/tree/master/charting_library)  
+
+`cp -R ../charting_library ./public`
 
 ## Project setup
 ```
