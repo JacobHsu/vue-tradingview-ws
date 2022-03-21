@@ -1,21 +1,30 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <el-main v-if="symbol">
-    {{symbolInfo}}
-  </el-main>
+  <div>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <KLineHeader
+      v-if="symbolList.value"
+      :symbol="symbol"
+      :symbolList="symbolList.value"
+      @symbolHanlder="symbolHanlder"
+    />
+    <el-main v-if="symbol">
+      {{symbolInfo}}
+    </el-main>
+   </div>
 </template>
 
 <script>
 import { ref, onMounted, reactive } from 'vue'
 // import HelloWorld from './components/HelloWorld.vue'
+import KLineHeader from '@/components/KLineHeader'
 import { getSymbols } from '@/api'
 
 export default {
   name: 'App',
-  // components: {
-  //   HelloWorld
-  // },
+  components: {
+    KLineHeader
+  },
   setup() {
     const symbolList = reactive({})
     const symbol = ref('')
@@ -27,25 +36,20 @@ export default {
       symbol.value = symbolData
       symbolInfo.value = list[0]
     })
+    const symbolHanlder = (e) => {
+      symbol.value = e
+      // kLineRef.value.setSymbol(e)
+    }
     return {
       symbol,
       symbolList,
       symbolInfo,
+      symbolHanlder,
     }
   },  
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
 <style lang="scss" scoped>
   ::v-deep(.el-main) {
     padding: 0;

@@ -10,16 +10,18 @@
   "dependencies": {
     "axios": "^0.26.1",
     "core-js": "^3.6.5",
-    "element-plus": "^2.1.4",
+    "element-plus": "1.0.2-beta.28",
     "query-string": "^7.1.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@vue/babel-plugin-jsx": "^1.1.1",
     "@vue/cli-plugin-babel": "~4.5.13",
     "@vue/cli-plugin-eslint": "~4.5.13",
     "@vue/cli-service": "~4.5.13",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
     "node-sass": "^4.12.0",
@@ -38,7 +40,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/no-mutating-props": 0
+    }
   },
   "browserslist": [
     "> 1%",
