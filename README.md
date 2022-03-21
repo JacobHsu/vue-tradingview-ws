@@ -1,5 +1,7 @@
 # vue-tradingview-ws
 
+[tradingview-web-socket](https://github.com/472647301/tradingview-web-socket) vue3-javascript-demo
+
 ## Project setup
 ```
 yarn install

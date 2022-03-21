@@ -1,6 +1,8 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <el-main>
+  </el-main>
 </template>
 
 <script>
@@ -23,4 +25,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+</style>
+<style lang="scss" scoped>
+  ::v-deep(.el-main) {
+    padding: 0;
+  }
 </style>
