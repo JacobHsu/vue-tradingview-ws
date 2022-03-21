@@ -4,7 +4,9 @@
 
 tradingview-web-socket/[charting_library](https://github.com/472647301/tradingview-web-socket/tree/master/charting_library)  
 
-`cp -R ../charting_library ./public`
+`cp -R ../charting_library ./public`  
+
+npm [tradingview-api](https://github.com/472647301/tradingview-web-socket/tree/master/tradingview-api)
 
 ## Project setup
 ```

@@ -9,7 +9,11 @@
       @symbolHanlder="symbolHanlder"
     />
     <el-main v-if="symbol">
-      {{symbolInfo}}
+      <KLineWidget
+        :symbolInfo="symbolInfo"
+        :symbol="symbol.toLocaleUpperCase()"
+        ref="kLineRef"
+      />
     </el-main>
    </div>
 </template>
@@ -18,17 +22,20 @@
 import { ref, onMounted, reactive } from 'vue'
 // import HelloWorld from './components/HelloWorld.vue'
 import KLineHeader from '@/components/KLineHeader'
+import KLineWidget from '@/components/KLineWidget'
 import { getSymbols } from '@/api'
 import { ws } from '@/utils/socket'
 export default {
   name: 'App',
   components: {
-    KLineHeader
+    KLineHeader,
+    KLineWidget,
   },
   setup() {
     const symbolList = reactive({})
     const symbol = ref('')
     const symbolInfo = ref({})
+    const kLineRef = ref(null)
     onMounted(async () => {
       ws.initWebSocket()
       const [list, symbolData] = await getSymbols()
@@ -38,13 +45,14 @@ export default {
     })
     const symbolHanlder = (e) => {
       symbol.value = e
-      // kLineRef.value.setSymbol(e)
+      kLineRef.value.setSymbol(e)
     }
     return {
       symbol,
       symbolList,
       symbolInfo,
       symbolHanlder,
+      kLineRef,
     }
   },  
 }
