@@ -3,7 +3,7 @@
     <el-select
       v-model="symbol"
       filterable
-      :placeholder="$t('plzChoicePair')"
+      :placeholder="'plzChoicePair'"
       @change="changeHallder"
     >
       <el-option

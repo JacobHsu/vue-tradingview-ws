@@ -25,6 +25,7 @@ import KLineHeader from '@/components/KLineHeader'
 import KLineWidget from '@/components/KLineWidget'
 import { getSymbols } from '@/api'
 import { ws } from '@/utils/socket'
+
 export default {
   name: 'App',
   components: {
@@ -47,6 +48,7 @@ export default {
       symbol.value = e
       kLineRef.value.setSymbol(e)
     }
+
     return {
       symbol,
       symbolList,
@@ -54,7 +56,7 @@ export default {
       symbolHanlder,
       kLineRef,
     }
-  },  
+  }, 
 }
 </script>
 
