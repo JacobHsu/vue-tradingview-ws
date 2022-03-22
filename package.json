@@ -1,5 +1,6 @@
 {
   "name": "vue-tradingview-ws",
+  "homepage": "https://jacobhsu.github.io/vue-tradingview-ws",
   "version": "0.1.0",
   "private": true,
   "scripts": {
