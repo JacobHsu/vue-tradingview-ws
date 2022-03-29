@@ -19,7 +19,8 @@
     "query-string": "^7.1.1",
     "ramda": "^0.28.0",
     "tradingview-api": "^1.0.2",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-i18n": "^9.0.0"
   },
   "devDependencies": {
     "@vue/babel-plugin-jsx": "^1.1.1",

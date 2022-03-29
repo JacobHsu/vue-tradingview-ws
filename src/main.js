@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import installElementPlus from './plugins/element'
+import installElementPlus, { i18n } from './plugins/element'
 import './styles/reset.css'
 
 const app = createApp(App)
 installElementPlus(app)
-app.mount('#app')
+app.use(i18n).mount('#app')

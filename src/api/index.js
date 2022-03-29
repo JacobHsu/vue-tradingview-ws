@@ -1,6 +1,6 @@
 import axios from '@/plugins/axios'
 import qs from '@/plugins/qs'
-import { includes } from 'ramda'
+// import { includes } from 'ramda'
 
 /** 取得幣種 */
 export const getSymbols = async () => {
@@ -9,7 +9,7 @@ export const getSymbols = async () => {
   const symbolList = []
   data.data.forEach((item) => {
     if (item['quote-currency'] === 'usdt') {
-      if(includes(item['base-currency'],['near','eth','btc'])) {
+      //if(includes(item['base-currency'],['near','eth','btc'])) {
         symbolList.push({
           ...item,
           pair:
@@ -17,7 +17,7 @@ export const getSymbols = async () => {
             '/' +
             item['quote-currency'].toLocaleUpperCase(),
         })
-      }
+      //}
     }
   })
   const symbolData = symbolList.length ? symbolList[0].symbol : ''

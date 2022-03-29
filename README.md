@@ -13,6 +13,12 @@ npm [tradingview-api](https://github.com/472647301/tradingview-web-socket/tree/m
 [featuresets](https://tradingview.gitee.io/featuresets/)
 TradingView 中文开发文档 [功能集](https://www.lhsz.xyz/read/tradingViewWikiCn/book-Featuresets.md) [volume_force_overlay](https://zlq4863947.gitbook.io/tradingview/4-tu-biao-ding-zhi/customization-overview)
 
+
+## References
+
+vue3 [element-plus](https://element-plus.org/zh-CN/guide/installation.html)
+
+
 ## Project setup
 ```
 yarn install
