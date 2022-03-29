@@ -8,6 +8,11 @@ tradingview-web-socket/[charting_library](https://github.com/472647301/tradingvi
 
 npm [tradingview-api](https://github.com/472647301/tradingview-web-socket/tree/master/tradingview-api)
 
+## tradingview
+
+[featuresets](https://tradingview.gitee.io/featuresets/)
+TradingView 中文开发文档 [功能集](https://www.lhsz.xyz/read/tradingViewWikiCn/book-Featuresets.md) [volume_force_overlay](https://zlq4863947.gitbook.io/tradingview/4-tu-biao-ding-zhi/customization-overview)
+
 ## Project setup
 ```
 yarn install
